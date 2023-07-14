@@ -19,7 +19,7 @@ export const Heading = ({
 
   return (
     <header className={styles.heading}>
-      <img src="/src/assets/afia-logo.png" alt="afia-logo" />
+      <img src="/src/assets/afiavector.svg" alt="afia-logo" />
       <div className="input-div">
         <input
           id="inp"
