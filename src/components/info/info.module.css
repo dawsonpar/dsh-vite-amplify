@@ -1,0 +1,19 @@
+.info {
+  padding: 10%;
+  padding-top: 5%;
+  align-items: center;
+}
+
+h3 {
+  color: #1b1c57;
+  margin-top: 50px;
+}
+
+h4 {
+  color: #4f5dff;
+  margin-top: 30px;
+}
+
+p {
+  line-height: 26px;
+}

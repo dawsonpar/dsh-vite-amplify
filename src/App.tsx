@@ -1,35 +1,45 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import "./index.css";
+import React, { useState } from "react";
+import { Heading } from "./components/nav/Heading";
+import Hero from "./components/Hero";
+import { DefaultInfo } from "./components/info/DefaultInfo";
+import { Info01 } from "./components/info/Info01";
+import { Info02 } from "./components/info/Info02";
+import { Info03 } from "./components/info/Info03";
+import { Info04 } from "./components/info/Info04";
+import { Info05 } from "./components/info/Info05";
+import { FinalPage } from "./components/info/FinalPage";
+import { WrongKey } from "./components/info/WrongKey";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App: React.FC = () => {
+  const [info, setInfo] = useState(<DefaultInfo />);
+
+  const handleButtonClick = (inputValue: string) => {
+    const lowerCaseInput = inputValue.toLowerCase();
+
+    if (lowerCaseInput === "key1") {
+      setInfo(<Info01 />);
+    } else if (lowerCaseInput === "key2") {
+      setInfo(<Info02 />);
+    } else if (lowerCaseInput === "key3") {
+      setInfo(<Info03 />);
+    } else if (lowerCaseInput === "key4") {
+      setInfo(<Info04 />);
+    } else if (lowerCaseInput === "key5") {
+      setInfo(<Info05 />);
+    } else if (lowerCaseInput === "finalkey") {
+      setInfo(<FinalPage />);
+    } else {
+      setInfo(<WrongKey />);
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <Heading handleButtonClick={handleButtonClick} />
+      <Hero info={info}></Hero>
+    </div>
   );
-}
+};
 
 export default App;
