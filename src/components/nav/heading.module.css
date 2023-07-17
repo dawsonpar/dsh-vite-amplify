@@ -1,12 +1,35 @@
 .heading {
   height: calc(45px + 3.6rem);
-  padding: 0 2.6rem;
   margin-top: 15px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+.desktop {
+  padding: 0 2.6rem;
+}
+
+.mobile {
+  /* background-color: #8b3434; */
+  padding: 0 1rem;
+}
+
+.mobile img {
+  max-width: 70px;
+  margin-right: 20px;
+}
+
+.mobile input {
+  width: 10rem;
+  font-size: 15px;
+}
+
+.mobile button {
+  width: 220px;
+}
+
 /* logo styles */
 
 img {
@@ -22,6 +45,15 @@ img {
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.input-div {
+  display: flex;
+  align-items: center;
+}
+
+.input-div button {
+  margin-left: 10px;
 }
 
 /* input styles */
@@ -78,13 +110,4 @@ button:hover {
   box-shadow: 0 10px 25px #002ec777;
   color: #fff;
   cursor: pointer;
-}
-
-.input-div {
-  display: flex;
-  align-items: center;
-}
-
-.input-div button {
-  margin-left: 10px;
 }

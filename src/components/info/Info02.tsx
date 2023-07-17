@@ -1,23 +1,14 @@
 import styles from "./info.module.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const Info02 = () => {
+  const matches = useMediaQuery("(min-width:450px)");
+
   return (
     <div className={styles.info}>
       <h2>Challenge 2 of 5: Welcome! 👋</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolor
-        quibusdam voluptas fugit doloribus? Exercitationem voluptatibus id,
-        tempora possimus amet beatae facilis aut, perspiciatis maiores a
-        assumenda omnis repellendus pariatur.
-      </p>
-      <h3>Heading 3</h3>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-        repellendus corporis similique explicabo velit. Velit, autem.
-        Repudiandae sequi aspernatur obcaecati repellendus, sunt incidunt,
-        praesentium dolor labore nemo nobis maxime dicta.
-      </p>
-      <h4>Heading 4</h4>
+      <h4>How to use useMediaQuery Component in ReactJS?</h4>
+      <span>{`Is Screen at Minimum 450px: ${matches}`}</span>
     </div>
   );
 };
