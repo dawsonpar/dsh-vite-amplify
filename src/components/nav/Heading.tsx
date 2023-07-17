@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./heading.module.css";
+import afiaLogo from "./assets/afia-logo.png";
 
 export const Heading = ({
   handleButtonClick,
@@ -19,7 +20,7 @@ export const Heading = ({
 
   return (
     <header className={styles.heading}>
-      <img src="/src/assets/afiavector.svg" alt="afia-logo" />
+      <img src={afiaLogo} className="logo" alt="afia-logo" />
       <div className="input-div">
         <input
           id="inp"
