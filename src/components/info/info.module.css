@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.mobile {
+  max-width: 100%;
+}
+
 h3 {
   color: #1b1c57;
   margin-top: 50px;
