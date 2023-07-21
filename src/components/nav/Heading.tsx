@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import styles from "./heading.module.css";
 import afiaLogo from "./assets/afia-logo.png";
