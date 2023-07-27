@@ -37,6 +37,7 @@ img {
   margin: 10px;
   max-width: 90px;
   height: auto;
+  cursor: pointer;
 }
 
 .logo {

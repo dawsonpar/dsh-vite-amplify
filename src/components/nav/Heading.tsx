@@ -5,10 +5,14 @@ import styles from "./heading.module.css";
 import afiaLogo from "./assets/afia-logo.png";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-export const Heading = ({
-  handleButtonClick,
-}: {
+interface HeadingProps {
   handleButtonClick: (inputValue: string) => void;
+  handleLogoClick: () => void;
+}
+
+const Heading: React.FC<HeadingProps> = ({
+  handleButtonClick,
+  handleLogoClick,
 }) => {
   const [inputValue, setInputValue] = useState("");
 
@@ -21,6 +25,10 @@ export const Heading = ({
     setInputValue("");
   };
 
+  const handleLogoClickInternal = () => {
+    handleLogoClick();
+  };
+
   const matches = useMediaQuery("(min-width:450px)");
 
   return (
@@ -29,7 +37,12 @@ export const Heading = ({
         matches ? styles.desktop : styles.mobile
       }`}
     >
-      <img src={afiaLogo} className="logo" alt="afia-logo" />
+      <img
+        src={afiaLogo}
+        className="logo"
+        alt="afia-logo"
+        onClick={handleLogoClickInternal}
+      />
       <div className="input-div">
         <input
           id="inp"
@@ -44,3 +57,5 @@ export const Heading = ({
     </header>
   );
 };
+
+export default Heading;

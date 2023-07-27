@@ -1,6 +1,6 @@
 import "./index.css";
 import React, { useState } from "react";
-import { Heading } from "./components/nav/Heading";
+import Heading from "./components/nav/Heading";
 import Hero from "./components/Hero";
 import { DefaultInfo } from "./components/info/DefaultInfo";
 import { Info01 } from "./components/info/Info01";
@@ -34,9 +34,16 @@ const App: React.FC = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    setInfo(<DefaultInfo />);
+  };
+
   return (
     <div>
-      <Heading handleButtonClick={handleButtonClick} />
+      <Heading
+        handleButtonClick={handleButtonClick}
+        handleLogoClick={handleLogoClick}
+      />
       <Hero info={info}></Hero>
     </div>
   );
