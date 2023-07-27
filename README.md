@@ -15,3 +15,5 @@ Type and enter "key1" to load the first page.
 - Vite
 - MUI
 - AWS Amplify (or Vercel if support on AWS changes)
+
+_If you are a participating member of AFIA you won't find the secret keys here. Those are in a separate private repo._
