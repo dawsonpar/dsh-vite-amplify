@@ -1,4 +1,4 @@
-# Digital Scavenger Hunt App
+# Digital Scavenger Hunt Web App
 
 A web app to host a digital scavenger hunt with users. This app was designed to be used at Andrews University for social events,
 specifically with the Andrews Filipino International Association.
